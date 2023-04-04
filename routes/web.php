@@ -45,3 +45,24 @@ Route::get('/arr-add/2', function (): array {
         }
     */
 });
+
+/**
+ * @return array<int, int>
+ */
+Route::get('/arr-collapse', function (): array {
+    return Arr::collapse([[1, 2, 3], [4, 5, 6], [7, 8, 9]]);
+
+    /*
+        [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+        ]
+    */
+});
