@@ -17,3 +17,31 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+/**
+ * @return array<string, mixed>
+ */
+Route::get('/arr-add/1', function (): array {
+    return Arr::add(['name' => 'Desk'], 'price', 100);
+
+    /*
+        {
+            "name": "Desk",
+            "price": 100
+        }
+    */
+});
+
+/**
+ * @return array<string, mixed>
+ */
+Route::get('/arr-add/2', function (): array {
+    return Arr::add(['name' => 'Desk', 'price' => null], 'price', 200);
+
+    /*
+        {
+            "name": "Desk",
+            "price": 200
+        }
+    */
+});
