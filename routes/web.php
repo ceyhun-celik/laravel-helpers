@@ -66,3 +66,83 @@ Route::get('/arr-collapse', function (): array {
         ]
     */
 });
+
+/**
+ * @return array<int, array>
+ */
+Route::get('/arr-cross-join/1', function (): array {
+    return Arr::crossJoin([1, 2], ['a', 'b']);
+
+    /*
+        [
+            [
+                1,
+                "a"
+            ],
+            [
+                1,
+                "b"
+            ],
+            [
+                2,
+                "a"
+            ],
+            [
+                2,
+                "b"
+            ]
+        ]
+    */
+});
+
+/**
+ * @return array<int, array>
+ */
+Route::get('/arr-cross-join/2', function (): array {
+    return Arr::crossJoin([1, 2], ['a', 'b'], ['I', 'II']);
+
+    /*
+        [
+            [
+                1,
+                "a",
+                "I"
+            ],
+            [
+                1,
+                "a",
+                "II"
+            ],
+            [
+                1,
+                "b",
+                "I"
+            ],
+            [
+                1,
+                "b",
+                "II"
+            ],
+            [
+                2,
+                "a",
+                "I"
+            ],
+            [
+                2,
+                "a",
+                "II"
+            ],
+            [
+                2,
+                "b",
+                "I"
+            ],
+            [
+                2,
+                "b",
+                "II"
+            ]
+        ]
+    */
+});
