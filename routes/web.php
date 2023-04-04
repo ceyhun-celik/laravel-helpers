@@ -146,3 +146,46 @@ Route::get('/arr-cross-join/2', function (): array {
         ]
     */
 });
+
+/**
+ * @return array<int, string>
+ */
+Route::get('/arr-divide/1', function (): array {
+    [$keys, $values] = Arr::divide(['name' => 'Desk']);
+
+    return $keys;
+
+    /*
+        [
+            "name"
+        ]
+    */
+});
+
+/**
+ * @return array<int, string>
+ */
+Route::get('/arr-divide/2', function (): array {
+    [$keys, $values] = Arr::divide(['name' => 'Desk']);
+
+    return $values;
+
+    /*
+        [
+            "Desk"
+        ]
+    */
+});
+
+/**
+ * @return array<string, int>
+ */
+Route::get('/arr-dot', function (): array {
+    return Arr::dot(['products' => ['desk' => ['price' => 100]]]);
+
+    /*
+        {
+            "products.desk.price": 100
+        }
+    */
+});
