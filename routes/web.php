@@ -283,3 +283,22 @@ Route::get('/arr-has/2', function (): bool {
 
     // false
 });
+
+Route::get('/arr-has-any/1', function (): bool {
+    return Arr::hasAny(['product' => ['name' => 'Desk', 'price' => 100]], 'product.name');
+
+    // true
+});
+
+Route::get('/arr-has-any/2', function (): bool {
+    return Arr::hasAny(['product' => ['name' => 'Desk', 'price' => 100]], ['product.name', 'product.discount']);
+
+    // true
+});
+
+Route::get('/arr-has-any/3', function (): bool {
+    return Arr::hasAny(['product' => ['name' => 'Desk', 'price' => 100]], ['category', 'product.discount']);
+
+    // false
+});
+
