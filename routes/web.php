@@ -377,7 +377,7 @@ Route::get('/arr-map', function (): array {
 });
 
 /**
- * @retun array<string, mixed>
+ * @return array<string, mixed>
  */
 Route::get('/arr-only', function (): array {
     return Arr::only(['name' => 'Desk', 'price' => 100, 'orders' => 10], ['name', 'price']);
