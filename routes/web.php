@@ -454,3 +454,20 @@ Route::get('/arr-prepend/2', function (): array {
         }
     */
 });
+
+/**
+ * @return array<string, mixed>
+ */
+Route::get('/arr-prepend-keys-with', function (): array {
+    return Arr::prependKeysWith([
+        'name' => 'Desk',
+        'price' => 100,
+    ], 'product.');
+
+    /*
+        {
+            "product.name": "Desk",
+            "product.price": 100
+        }
+    */
+});
