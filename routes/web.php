@@ -510,3 +510,26 @@ Route::get('/arr-query', function (): string {
 
     // name=Taylor&order%5Bcolumn%5D=created_at&order%5Bdirection%5D=desc
 });
+
+Route::get('/arr-random/1', function (): int {
+    return Arr::random([1, 2, 3, 4, 5]);
+
+    // 4 - (retrieved randomly)
+});
+
+/**
+ * @return array<int, int>
+ */
+Route::get('/arr-random/2', function (): array {
+    return Arr::random([1, 2, 3, 4, 5], 3);
+
+    /*
+        [
+            2,
+            4,
+            5
+        ]
+
+        - (retrieved randomly)
+    */
+});
