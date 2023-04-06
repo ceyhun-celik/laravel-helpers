@@ -423,3 +423,34 @@ Route::get('/arr-pluck/2', function (): array {
         }
     */
 });
+
+/**
+ * @return array<int, string>
+ */
+Route::get('/arr-prepend/1', function (): array {
+    return Arr::prepend(['one', 'two', 'three', 'four'], 'zero');
+
+    /*
+        [
+            "zero",
+            "one",
+            "two",
+            "three",
+            "four"
+        ]
+    */
+});
+
+/**
+ * @return array<string, mixed>
+ */
+Route::get('/arr-prepend/2', function (): array {
+    return Arr::prepend(['price' => 100], 'Desk', 'name');
+
+    /*
+        {
+            "name": "Desk",
+            "price": 100
+        }
+    */
+});
