@@ -314,3 +314,14 @@ Route::get('/arr-is-list/2', function (): bool {
     // false
 });
 
+Route::get('/arr-join/1', function (): string {
+    return Arr::join(['Tailwind', 'Alpine', 'Laravel', 'Livewire'], ', ');
+
+    // Tailwind, Alpine, Laravel, Livewire
+});
+
+Route::get('/arr-join/2', function (): string {
+    return Arr::join(['Tailwind', 'Alpine', 'Laravel', 'Livewire'], ', ', ' and ');
+
+    // Tailwind, Alpine, Laravel and Livewire
+});
