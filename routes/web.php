@@ -189,3 +189,16 @@ Route::get('/arr-dot', function (): array {
         }
     */
 });
+
+/**
+ * @return array<string, string>
+ */
+Route::get('/arr-except', function (): array {
+    return Arr::except(['name' => 'Desk', 'price' => 100], ['price']);
+
+    /*
+        {
+            "name": "Desk"
+        }
+    */
+});
