@@ -302,3 +302,15 @@ Route::get('/arr-has-any/3', function (): bool {
     // false
 });
 
+Route::get('/arr-is-list/1', function (): bool {
+    return Arr::isList(['foo', 'bar', 'baz']);
+
+    // true
+});
+
+Route::get('/arr-is-list/2', function (): bool {
+    return Arr::isList(['product' => ['name' => 'Desk', 'price' => 100]]);
+
+    // false
+});
+
