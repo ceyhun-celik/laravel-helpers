@@ -562,6 +562,9 @@ Route::get('/arr-set', function (): array {
     */
 });
 
+/**
+ * @return array<int, int>
+ */
 Route::get('/arr-shuffle', function (): array {
     return Arr::shuffle([1, 2, 3, 4, 5]);
     
