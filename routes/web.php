@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Arr;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -359,4 +360,18 @@ Route::get('/arr-last/2', function (): int {
     return Arr::last([100, 200, 300, 110], fn (int $value, int $key): bool => $value >= 400, 500);
 
     // 500
+});
+
+/**
+ * @return array<string, string>
+ */
+Route::get('/arr-map', function (): array {
+    return Arr::map(['first' => 'james', 'last' => 'kirk'], fn (string $value, string $key) => Str::of($value)->ucfirst());
+
+    /*
+        {
+            "first": "James",
+            "last": "Kirk"
+        }
+    */
 });
