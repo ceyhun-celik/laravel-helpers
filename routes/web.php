@@ -241,3 +241,21 @@ Route::get('/arr-flatten', function (): array {
         ]
     */
 });
+
+/**
+ * @return array<string, array>
+ */
+Route::get('/arr-forget', function (): array {
+
+    $array = ['products' => ['desk' => ['price' => 100]]];
+
+    Arr::forget($array, 'products.desk');
+
+    return $array;
+
+    /*
+        {
+            "products": []
+        }
+    */
+});
