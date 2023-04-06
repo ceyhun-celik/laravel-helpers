@@ -656,3 +656,16 @@ Route::get('/arr-where-not-null', function (): array {
         }
     */
 });
+
+/**
+ * @return array<int, string>
+ */
+Route::get('/arr-wrap', function (): array {
+    return Arr::wrap('Laravel');
+
+    /*
+        [
+            "Laravel"
+        ]
+    */
+});
