@@ -259,3 +259,15 @@ Route::get('/arr-forget', function (): array {
         }
     */
 });
+
+Route::get('/arr-get/1', function (): int {
+    return Arr::get(['products' => ['desk' => ['price' => 100]]], 'products.desk.price');
+
+    // 100
+});
+
+Route::get('/arr-get/2', function (): int {
+    return Arr::get(['products' => ['desk' => ['price' => 100]]], 'products.desk.salary', 500);
+
+    // 500
+});
