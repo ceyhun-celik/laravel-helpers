@@ -660,12 +660,23 @@ Route::get('/arr-where-not-null', function (): array {
 /**
  * @return array<int, string>
  */
-Route::get('/arr-wrap', function (): array {
+Route::get('/arr-wrap/1', function (): array {
     return Arr::wrap('Laravel');
 
     /*
         [
             "Laravel"
         ]
+    */
+});
+
+/**
+ * @return array<null>
+ */
+Route::get('/arr-wrap/2', function (): array {
+    return Arr::wrap(null);
+
+    /*
+        []
     */
 });
