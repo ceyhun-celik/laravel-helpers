@@ -533,3 +533,31 @@ Route::get('/arr-random/2', function (): array {
         - (retrieved randomly)
     */
 });
+
+/**
+ * @return array<string, array>
+ */
+Route::get('/arr-set', function (): array {
+    /** @var array<string, array> $array */
+    $array = [
+        'products' => [
+            'desk' => [
+                'price' => 100,
+            ],
+        ],
+    ];
+    
+    Arr::set($array, 'products.desk.price', 250);
+
+    return $array;
+
+    /*
+        {
+            "products": {
+                "desk": {
+                    "price": 250
+                }
+            }
+        }
+    */
+});
