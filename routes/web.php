@@ -271,3 +271,15 @@ Route::get('/arr-get/2', function (): int {
 
     // 500
 });
+
+Route::get('/arr-has/1', function (): bool {
+    return Arr::has(['product' => ['name' => 'Desk', 'price' => 100]], 'product.name');
+
+    // true
+});
+
+Route::get('/arr-has/2', function (): bool {
+    return Arr::has(['product' => ['name' => 'Desk', 'price' => 100]], ['product.price', 'product.discount']);
+
+    // false
+});
