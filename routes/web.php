@@ -580,3 +580,12 @@ Route::get('/arr-shuffle', function (): array {
         - (generated randomly)
     */
 });
+
+// Route::get('/arr-sort', function (): array {
+//     /** @var array<int, string> */
+//     $array = ['Desk', 'Table', 'Chair'];
+
+//     Arr::sort($array);
+
+//     return $array;
+// });
