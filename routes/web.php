@@ -389,3 +389,37 @@ Route::get('/arr-only', function (): array {
         }
     */
 });
+
+/**
+ * @return array<int, string>
+ */
+Route::get('/arr-pluck/1', function (): array {
+    return Arr::pluck([
+        ['developer' => ['id' => 1, 'name' => 'Taylor']],
+        ['developer' => ['id' => 2, 'name' => 'Abigail']],
+    ], 'developer.name');
+
+    /*
+        [
+            "Taylor",
+            "Abigail"
+        ]
+    */
+});
+
+/**
+ * @return array<int, string>
+ */
+Route::get('/arr-pluck/2', function (): array {
+    return Arr::pluck([
+        ['developer' => ['id' => 1, 'name' => 'Taylor']],
+        ['developer' => ['id' => 2, 'name' => 'Abigail']],
+    ], 'developer.name', 'developer.id');
+
+    /*
+        {
+            "1": "Taylor",
+            "2": "Abigail"
+        }
+    */
+});
