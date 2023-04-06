@@ -226,3 +226,18 @@ Route::get('/arr-first/2', function (): int {
 
     // 500
 });
+
+/**
+ * @return array<int, string>
+ */
+Route::get('/arr-flatten', function (): array {
+    return Arr::flatten(['name' => 'Joe', 'languages' => ['PHP', 'Ruby']]);
+
+    /*
+        [
+            "Joe",
+            "PHP",
+            "Ruby"
+        ]
+    */
+});
