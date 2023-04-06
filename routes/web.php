@@ -348,3 +348,15 @@ Route::get('/arr-key-by', function (): array {
         }
     */
 });
+
+Route::get('/arr-last/1', function (): int {
+    return Arr::last([100, 200, 300, 110], fn (int $value, int $key): bool => $value >= 150);
+
+    // 300
+});
+
+Route::get('/arr-last/2', function (): int {
+    return Arr::last([100, 200, 300, 110], fn (int $value, int $key): bool => $value >= 400, 500);
+
+    // 500
+});
