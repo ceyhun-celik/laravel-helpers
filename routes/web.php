@@ -589,3 +589,18 @@ Route::get('/arr-shuffle', function (): array {
 
 //     return $array;
 // });
+
+Route::get('/arr-to-css-classes', function (): string {
+    /** @var bool $isActive */
+    $isActive = false;
+
+    /** @var bool $hasError */
+    $hasError = true;
+
+    /** @var array<mixed, mixed> */
+    $array = ['p-4', 'font-bold' => $isActive, 'bg-red' => $hasError];
+
+    return Arr::toCssClasses($array);
+
+    // p-4 bg-red
+});
