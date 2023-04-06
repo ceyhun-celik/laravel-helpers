@@ -498,3 +498,15 @@ Route::get('/arr-pull/2', function (): array {
         }
     */
 });
+
+Route::get('/arr-query', function (): string {
+    return Arr::query([
+        'name' => 'Taylor',
+        'order' => [
+            'column' => 'created_at',
+            'direction' => 'desc',
+        ]
+    ]);
+
+    // name=Taylor&order%5Bcolumn%5D=created_at&order%5Bdirection%5D=desc
+});
