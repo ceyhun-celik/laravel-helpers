@@ -561,3 +561,19 @@ Route::get('/arr-set', function (): array {
         }
     */
 });
+
+Route::get('/arr-shuffle', function (): array {
+    return Arr::shuffle([1, 2, 3, 4, 5]);
+    
+    /*
+        [
+            2,
+            5,
+            3,
+            1,
+            4
+        ]
+
+        - (generated randomly)
+    */
+});
