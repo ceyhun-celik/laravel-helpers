@@ -471,3 +471,30 @@ Route::get('/arr-prepend-keys-with', function (): array {
         }
     */
 });
+
+Route::get('/arr-pull/1', function (): string {
+    /** @var array<string, mixed> $array */
+    $array = ['name' => 'Desk', 'price' => 100];
+
+    return Arr::pull($array, 'name');
+
+    // Desk
+});
+
+/**
+ * @return array<string, int>
+ */
+Route::get('/arr-pull/2', function (): array {
+    /** @var array<string, mixed> $array */
+    $array = ['name' => 'Desk', 'price' => 100];
+
+    Arr::pull($array, 'name');
+
+    return $array;
+
+    /*
+        {
+            "price": 100
+        }
+    */
+});
