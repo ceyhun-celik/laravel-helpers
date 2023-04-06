@@ -626,3 +626,17 @@ Route::get('/arr-undot', function (): array {
         }
     */
 });
+
+/**
+ * @return array<int, string>
+ */
+Route::get('/arr-where', function (): array {
+    return Arr::where([100, '200', 300, '400', 500], fn (string|int $value, int $key): bool => is_string($value));
+
+    /*
+        {
+            "1": "200",
+            "3": "400"
+        }
+    */
+});
