@@ -640,3 +640,19 @@ Route::get('/arr-where', function (): array {
         }
     */
 });
+
+/**
+ * @return array<int, int>
+ */
+Route::get('/arr-where-not-null', function (): array {
+    return Arr::whereNotNull([0, 1, null, 2, 3]);
+
+    /*
+        {
+            "0": 0,
+            "1": 1,
+            "3": 2,
+            "4": 3
+        }
+    */
+});
