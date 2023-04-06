@@ -202,3 +202,27 @@ Route::get('/arr-except', function (): array {
         }
     */
 });
+
+Route::get('/arr-exists/1', function (): bool {
+    return Arr::exists(['name' => 'John Doe', 'age' => 17], 'name');
+
+    // true
+});
+
+Route::get('/arr-exists/2', function (): bool {
+    return Arr::exists(['name' => 'John Doe', 'age' => 17], 'salary');
+
+    // false
+});
+
+Route::get('/arr-first/1', function (): int {
+    return Arr::first([100, 200, 300], fn (int $value, int $key): bool => $value >= 150);
+
+    // 200
+});
+
+Route::get('/arr-first/2', function (): int {
+    return Arr::first([100, 200, 300], fn (int $value, int $key): bool => $value >= 400, 500);
+
+    // 500
+});
