@@ -325,3 +325,26 @@ Route::get('/arr-join/2', function (): string {
 
     // Tailwind, Alpine, Laravel and Livewire
 });
+
+/**
+ * @return array<string, array>
+ */
+Route::get('/arr-key-by', function (): array {
+    return Arr::keyBy([
+        ['product_id' => 'prod-100', 'name' => 'Desk'],
+        ['product_id' => 'prod-200', 'name' => 'Book'],
+    ], 'product_id');
+
+    /*
+        {
+            "prod-100": {
+                "product_id": "prod-100",
+                "name": "Desk"
+            },
+            "prod-200": {
+                "product_id": "prod-200",
+                "name": "Book"
+            }
+        }
+    */
+});
