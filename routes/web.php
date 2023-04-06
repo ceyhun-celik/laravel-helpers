@@ -604,3 +604,25 @@ Route::get('/arr-to-css-classes', function (): string {
 
     // p-4 bg-red
 });
+
+/**
+ * @return array<string, array>
+ */
+Route::get('/arr-undot', function (): array {
+    /** @var array<string, string> */
+    $array = [
+        'user.name' => 'Kevin Malone',
+        'user.occupation' => 'Accountant',
+    ];
+
+    return Arr::undot($array);
+
+    /*
+        {
+            "user": {
+                "name": "Kevin Malone",
+                "occupation": "Accountant"
+            }
+        }
+    */
+});
