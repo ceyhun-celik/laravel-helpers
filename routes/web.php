@@ -788,3 +788,9 @@ Route::get('/e', function (): string {
 
     // &lt;h1&gt;Laravel&lt;/h1&gt;gt;
 });
+
+Route::get('/preg-replace-array', function (): string {
+    return preg_replace_array('/:[a-z_]+/', ['8:30', '9:00'], 'The event will take place between :start and :end');
+
+    // The event will take place between 8:30 and 9:00
+});
