@@ -776,3 +776,9 @@ Route::get('/storage-path/2', function (): string {
 
     // /home/ceyhun/Desktop/laravel-helpers/storage/app/file.txt
 });
+
+Route::get('/class-basename', function (): string {
+    return class_basename('Foo\Bar\Baz');
+
+    // Baz
+});
