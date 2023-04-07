@@ -782,3 +782,9 @@ Route::get('/class-basename', function (): string {
 
     // Baz
 });
+
+Route::get('/e', function (): string {
+    return e('<h1>Laravel</h1>');
+
+    // &lt;h1&gt;Laravel&lt;/h1&gt;gt;
+});
