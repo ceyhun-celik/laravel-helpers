@@ -728,3 +728,15 @@ Route::get('/database-path/2', function (): string {
 
     // /home/ceyhun/Desktop/laravel-helpers/database/factories/UserFactory.php
 });
+
+Route::get('/lang-path/1', function (): string {
+    return lang_path();
+
+    // /home/ceyhun/Desktop/laravel-helpers/lang
+});
+
+Route::get('/lang-path/2', function (): string {
+    return lang_path('en/messages.php');
+
+    // /home/ceyhun/Desktop/laravel-helpers/lang/en/messages.php
+});
