@@ -704,3 +704,15 @@ Route::get('/base-path/2', function (): string {
 
     // /home/ceyhun/Desktop/laravel-helpers/vendor/bin
 });
+
+Route::get('/config-path/1', function (): string {
+    return config_path();
+
+    // /home/ceyhun/Desktop/laravel-helpers/config
+});
+
+Route::get('/config-path/2', function (): string {
+    return config_path('app.php');
+
+    // /home/ceyhun/Desktop/laravel-helpers/config/app.php
+});
