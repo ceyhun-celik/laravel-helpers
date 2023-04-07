@@ -680,3 +680,16 @@ Route::get('/arr-wrap/2', function (): array {
         []
     */
 });
+
+Route::get('/app-path/1', function (): string {
+    return app_path();
+
+    // /home/ceyhun/Desktop/laravel-helpers/app
+});
+
+Route::get('/app-path/2', function (): string {
+    return app_path('Http/Controllers/Controller.php');
+
+    // /home/ceyhun/Desktop/laravel-helpers/app/Http/Controllers/Controller.php
+});
+
