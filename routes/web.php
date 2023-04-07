@@ -752,3 +752,15 @@ Route::get('/public-path/2', function (): string {
 
     // /home/ceyhun/Desktop/laravel-helpers/public/css/app.css
 });
+
+Route::get('/resource-path/1', function (): string {
+    return resource_path();
+
+    // /home/ceyhun/Desktop/laravel-helpers/resources
+});
+
+Route::get('/resource-path/2', function (): string {
+    return resource_path('sass/app.scss');
+
+    // /home/ceyhun/Desktop/laravel-helpers/resources/sass/app.scss
+});
