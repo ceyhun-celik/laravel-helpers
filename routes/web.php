@@ -716,3 +716,15 @@ Route::get('/config-path/2', function (): string {
 
     // /home/ceyhun/Desktop/laravel-helpers/config/app.php
 });
+
+Route::get('/database-path/1', function (): string {
+    return database_path();
+
+    // /home/ceyhun/Desktop/laravel-helpers/database
+});
+
+Route::get('/database-path/2', function (): string {
+    return database_path('factories/UserFactory.php');
+
+    // /home/ceyhun/Desktop/laravel-helpers/database/factories/UserFactory.php
+});
