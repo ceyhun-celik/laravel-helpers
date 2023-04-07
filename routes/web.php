@@ -740,3 +740,15 @@ Route::get('/lang-path/2', function (): string {
 
     // /home/ceyhun/Desktop/laravel-helpers/lang/en/messages.php
 });
+
+Route::get('/public-path/1', function (): string {
+    return public_path();
+
+    // /home/ceyhun/Desktop/laravel-helpers/public
+});
+
+Route::get('/public-path/2', function (): string {
+    return public_path('css/app.css');
+
+    // /home/ceyhun/Desktop/laravel-helpers/public/css/app.css
+});
