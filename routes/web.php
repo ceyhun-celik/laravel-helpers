@@ -764,3 +764,15 @@ Route::get('/resource-path/2', function (): string {
 
     // /home/ceyhun/Desktop/laravel-helpers/resources/sass/app.scss
 });
+
+Route::get('/storage-path/1', function (): string {
+    return storage_path();
+
+    // /home/ceyhun/Desktop/laravel-helpers/storage
+});
+
+Route::get('/storage-path/2', function (): string {
+    return storage_path('app/file.txt');
+
+    // /home/ceyhun/Desktop/laravel-helpers/storage/app/file.txt
+});
