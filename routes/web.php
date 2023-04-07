@@ -693,3 +693,14 @@ Route::get('/app-path/2', function (): string {
     // /home/ceyhun/Desktop/laravel-helpers/app/Http/Controllers/Controller.php
 });
 
+Route::get('/base-path/1', function (): string {
+    return base_path();
+
+    // /home/ceyhun/Desktop/laravel-helpers
+});
+
+Route::get('/base-path/2', function (): string {
+    return base_path('vendor/bin');
+
+    // /home/ceyhun/Desktop/laravel-helpers/vendor/bin
+});
