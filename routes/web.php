@@ -931,3 +931,9 @@ Route::get('/str-headline/2', function (): string {
 
     // Email Notification Sent
 });
+
+Route::get('/str-inline-markdown', function (): string {
+    return Str::inlineMarkdown('**Laravel**');
+
+    // <strong>Laravel</strong>
+});
