@@ -800,3 +800,9 @@ Route::get('/str-after', function (): string {
 
     // ' my name'
 });
+
+Route::get('/str-after-last', function (): string {
+    return Str::afterLast('App\Http\Controllers\UserController', '\\');
+
+    // UserController
+});
