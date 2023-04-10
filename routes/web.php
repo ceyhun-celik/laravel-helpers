@@ -907,3 +907,15 @@ Route::get('/str-excerpt/2', function (): string {
 
     // (...)my name
 });
+
+Route::get('/str-finish/1', function (): string {
+    return Str::finish('this/string', '/');
+
+    // this/string/
+});
+
+Route::get('str-finish/2', function (): string {
+    return Str::finish('this/string/', '/');
+
+    // this/string/
+});
