@@ -914,7 +914,7 @@ Route::get('/str-finish/1', function (): string {
     // this/string/
 });
 
-Route::get('str-finish/2', function (): string {
+Route::get('/str-finish/2', function (): string {
     return Str::finish('this/string/', '/');
 
     // this/string/
