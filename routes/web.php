@@ -866,3 +866,15 @@ Route::get('/str-contains-all/2', function (): bool {
 
     // false
 });
+
+Route::get('/str-ends-with/1', function (): bool {
+    return Str::endsWith('This is my name', 'name');
+
+    // true
+});
+
+Route::get('/str-ends-with/2', function (): bool {
+    return Str::endsWith('This is my name', 'foo');
+
+    // false
+});
