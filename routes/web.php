@@ -830,3 +830,9 @@ Route::get('/str-between', function (): string {
 
     // ' is my '
 });
+
+Route::get('/str-between-first', function (): string {
+    return Str::betweenFirst('[a] bc [d]', '[', ']');
+
+    // a
+});
