@@ -949,3 +949,15 @@ Route::get('/str-is/2', function (): bool {
 
     // false
 });
+
+Route::get('/str-is-ascii/1', function (): bool {
+    return Str::isAscii('Taylor');
+
+    // true
+});
+
+Route::get('/str-is-ascii/2', function (): bool {
+    return Str::isAscii('ü');
+
+    // false
+});
