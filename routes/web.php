@@ -919,3 +919,15 @@ Route::get('/str-finish/2', function (): string {
 
     // this/string/
 });
+
+Route::get('/str-headline/1', function (): string {
+    return Str::headline('steve_jobs');
+
+    // Steve Jobs
+});
+
+Route::get('/str-headline/2', function (): string {
+    return Str::headline('EmailNotificationSent');
+
+    // Email Notification Sent
+});
