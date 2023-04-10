@@ -878,3 +878,16 @@ Route::get('/str-ends-with/2', function (): bool {
 
     // false
 });
+
+Route::get('/str-ends-with/3', function (): bool {
+    return Str::endsWith('This is my name', ['name', 'foo']);
+
+    // true
+});
+
+Route::get('/str-ends-with/4', function (): bool {
+    return Str::endsWith('This is my name', ['foo', 'bar']);
+
+    // bar
+});
+
