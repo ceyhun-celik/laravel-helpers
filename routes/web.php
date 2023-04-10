@@ -888,6 +888,5 @@ Route::get('/str-ends-with/3', function (): bool {
 Route::get('/str-ends-with/4', function (): bool {
     return Str::endsWith('This is my name', ['foo', 'bar']);
 
-    // bar
+    // false
 });
-
