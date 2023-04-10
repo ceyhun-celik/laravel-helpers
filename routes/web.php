@@ -890,3 +890,20 @@ Route::get('/str-ends-with/4', function (): bool {
 
     // false
 });
+
+Route::get('/str-excerpt/1', function (): string {
+    return Str::excerpt('This is my name', 'my', [
+        'radius' => 3
+    ]);
+
+    // ...is my na...
+});
+
+Route::get('/str-excerpt/2', function (): string {
+    return Str::excerpt('This is my name', 'name', [
+        'radius' => 3,
+        'omission' => '(...)',
+    ]);
+
+    // (...)my name
+});
