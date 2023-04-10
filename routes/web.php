@@ -854,3 +854,15 @@ Route::get('/str-contains/2', function (): bool {
 
     // true
 });
+
+Route::get('/str-contains-all/1', function (): bool {
+    return Str::containsAll('This is my name', ['my', 'name']);
+
+    // true
+});
+
+Route::get('/str-contains-all/2', function (): bool {
+    return Str::containsAll('This is my name', ['my', 'foo']);
+
+    // false
+});
