@@ -836,3 +836,9 @@ Route::get('/str-between-first', function (): string {
 
     // a
 });
+
+Route::get('/str-camel', function (): string {
+    return Str::camel('foo_bar');
+
+    // fooBar
+});
