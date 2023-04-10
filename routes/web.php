@@ -842,3 +842,15 @@ Route::get('/str-camel', function (): string {
 
     // fooBar
 });
+
+Route::get('/str-contains/1', function (): bool {
+    return Str::contains('This is my name', 'my');
+
+    // true
+});
+
+Route::get('/str-contains/2', function (): bool {
+    return Str::contains('This is my name', ['my', 'foo']);
+
+    // true
+});
