@@ -937,3 +937,15 @@ Route::get('/str-inline-markdown', function (): string {
 
     // <strong>Laravel</strong>
 });
+
+Route::get('/str-is/1', function (): bool {
+    return Str::is('foo*', 'foobar');
+
+    // true
+});
+
+Route::get('/str-is/2', function (): bool {
+    return Str::is('baz*', 'foobar');
+
+    // false
+});
