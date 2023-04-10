@@ -812,3 +812,9 @@ Route::get('/str-ascii', function (): string {
 
     // u
 });
+
+Route::get('/str-before', function (): string {
+    return Str::before('This is my name', 'my name');
+
+    // 'This is '
+});
