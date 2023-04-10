@@ -818,3 +818,9 @@ Route::get('/str-before', function (): string {
 
     // 'This is '
 });
+
+Route::get('/str-before-last', function (): string {
+    return Str::before('App\Http\Controllers\UserController', '\\');
+
+    // App
+});
