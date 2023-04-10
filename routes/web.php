@@ -806,3 +806,9 @@ Route::get('/str-after-last', function (): string {
 
     // UserController
 });
+
+Route::get('/str-ascii', function (): string {
+    return Str::ascii('û');
+
+    // u
+});
