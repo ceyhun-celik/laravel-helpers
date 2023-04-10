@@ -794,3 +794,9 @@ Route::get('/preg-replace-array', function (): string {
 
     // The event will take place between 8:30 and 9:00
 });
+
+Route::get('/str-after', function (): string {
+    return Str::after('This is my name', 'This is');
+
+    // ' my name'
+});
