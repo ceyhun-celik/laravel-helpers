@@ -824,3 +824,9 @@ Route::get('/str-before-last', function (): string {
 
     // App
 });
+
+Route::get('/str-between', function (): string {
+    return Str::between('This is my name', 'This', 'name');
+
+    // ' is my '
+});
