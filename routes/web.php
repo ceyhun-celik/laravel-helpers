@@ -961,3 +961,23 @@ Route::get('/str-is-ascii/2', function (): bool {
 
     // false
 });
+
+Route::get('/str-is-json/1', function (): bool {
+    return Str::isJson('[1,2,3]');
+
+    // true
+});
+
+Route::get('/str-is-json/2', function (): bool {
+    return Str::isJson('{"first": "John", "last": "Doe"}');
+
+    // true
+});
+
+Route::get('/str-is-json/3', function (): bool {
+    return Str::isJson('{first: "John", last: "Doe"}');
+
+    // false
+});
+
+// https://laravel.com/docs/10.x/helpers#method-str-is-json
