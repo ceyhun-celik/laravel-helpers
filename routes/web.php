@@ -992,3 +992,14 @@ Route::get('/str-is-ulid/2', function (): bool {
     // false
 });
 
+Route::get('/str-is-uuid/1', function (): bool {
+    return Str::isUuid('a0a2a2d2-0b87-4a18-83f2-2529882be2de');
+
+    // true
+});
+
+Route::get('/str-is-uuid/2', function (): bool {
+    return Str::isUuid('Laravel');
+
+    // false
+});
