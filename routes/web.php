@@ -980,4 +980,15 @@ Route::get('/str-is-json/3', function (): bool {
     // false
 });
 
-// https://laravel.com/docs/10.x/helpers#method-str-is-json
+Route::get('/str-is-ulid/1', function (): bool {
+    return Str::isUlid('01gd6r360bp37zj17nxb55yv40');
+
+    // true
+});
+
+Route::get('/str-is-ulid/2', function (): bool {
+    return Str::isUlid('Laravel');
+
+    // false
+});
+
