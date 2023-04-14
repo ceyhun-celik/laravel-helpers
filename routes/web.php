@@ -1084,4 +1084,16 @@ Route::get('/str-pad-both/2', function (): string {
     // '  James   '
 });
 
+Route::get('/str-pad-left/1', function (): string {
+    return Str::padLeft('James', 10, '-=');
+
+    // -=-=-James
+});
+
+Route::get('/str-pad-left/2', function (): string {
+    return Str::padLeft('James', 10);
+
+    // '     James'
+});
+
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
