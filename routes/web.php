@@ -1150,4 +1150,10 @@ Route::get('/str-random', function (): string {
     // PraDU3VKjayJUK6bZ2srch8d1DcjhVunJtGHgcJF
 });
 
+Route::get('/str-remove', function (): string {
+    return Str::remove('e', 'Peter Piper picked a peck of pickled peppers.');
+
+    // Ptr Pipr pickd a pck of pickld ppprs.
+});
+
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
