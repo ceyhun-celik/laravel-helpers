@@ -1040,4 +1040,24 @@ Route::get('/str-lower', function (): string {
     // laravel
 });
 
+Route::get('/str-markdown/1', function (): string {
+    return Str::markdown('# Laravel');
+
+    // <h1>Laravel</h1>
+});
+
+Route::get('/str-markdown/2', function (): string {
+    return Str::markdown('# Taylor <b>Otwell</b>');
+
+    // <h1>Taylor <b>Otwell</b></h1>
+});
+
+Route::get('/str-markdown/3', function (): string {
+    return Str::markdown('# Taylor <b>Otwell</b>', [
+        'html_input' => 'strip',
+    ]);
+
+    // <h1>Taylor Otwell</h1>
+});
+
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
