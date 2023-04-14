@@ -1003,3 +1003,11 @@ Route::get('/str-is-uuid/2', function (): bool {
 
     // false
 });
+
+Route::get('/str-kebab', function () {
+    return Str::kebab('fooBar');
+
+    // foo-bar
+});
+
+// https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
