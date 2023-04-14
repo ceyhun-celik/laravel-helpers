@@ -1144,4 +1144,10 @@ Route::get('/str-plural-studly/2', function (): string {
     // UserFeedback
 });
 
+Route::get('/str-random', function (): string {
+    return Str::random(40);
+
+    // PraDU3VKjayJUK6bZ2srch8d1DcjhVunJtGHgcJF
+});
+
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
