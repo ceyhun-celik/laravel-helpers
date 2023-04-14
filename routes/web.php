@@ -1072,4 +1072,16 @@ Route::get('/str-mask/2', function (): string {
     // tay***@example.com
 });
 
+Route::get('/str-pad-both/1', function (): string {
+    return Str::padBoth('James', 10, '_');
+
+    // __James___
+});
+
+Route::get('/str-pad-both/2', function (): string {
+    return Str::padBoth('James', 10);
+
+    // '  James   '
+});
+
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
