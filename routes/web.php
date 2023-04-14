@@ -1010,5 +1010,10 @@ Route::get('/str-kebab', function (): string {
     // foo-bar
 });
 
+Route::get('/str-lcfirst', function (): string {
+    return Str::lcfirst('Foo Bar');
+
+    // foo Bar
+});
 
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
