@@ -1016,4 +1016,10 @@ Route::get('/str-lcfirst', function (): string {
     // foo Bar
 });
 
+Route::get('/str-length', function (): int {
+    return Str::length('Laravel');
+
+    // 7
+});
+
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
