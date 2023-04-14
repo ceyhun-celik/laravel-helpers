@@ -1034,4 +1034,10 @@ Route::get('/str-limit/2', function (): string {
     // The quick brown fox(...)
 });
 
+Route::get('/str-lower', function (): string {
+    return Str::lower('LARAVEL');
+
+    // laravel
+});
+
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
