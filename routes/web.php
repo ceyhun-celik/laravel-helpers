@@ -1132,5 +1132,16 @@ Route::get('/str-plural/2', function (): string {
     // children
 });
 
+Route::get('/str-plural-studly/1', function (): string {
+    return Str::pluralStudly('VerifiedHuman');
+
+    // VerifiedHumans
+});
+
+Route::get('/str-plural-studly/2', function (): string {
+    return Str::pluralStudly('UserFeedback');
+
+    // UserFeedback
+});
 
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
