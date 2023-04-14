@@ -1060,4 +1060,16 @@ Route::get('/str-markdown/3', function (): string {
     // <h1>Taylor Otwell</h1>
 });
 
+Route::get('/str-mask/1', function (): string {
+    return Str::mask('taylor@example.com', '*', 3);
+
+    // tay***************
+});
+
+Route::get('/str-mask/2', function (): string {
+    return Str::mask('taylor@example.com', '*', -15, 3);
+
+    // tay***@example.com
+});
+
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
