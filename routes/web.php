@@ -1120,4 +1120,17 @@ Route::get('/str-password/2', function (): string {
     // 79%&cH?w)xh2
 });
 
+Route::get('/str-plural/1', function (): string {
+    return Str::plural('car');
+
+    // cars
+});
+
+Route::get('/str-plural/2', function (): string {
+    return Str::plural('child');
+
+    // children
+});
+
+
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
