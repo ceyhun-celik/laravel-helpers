@@ -1108,4 +1108,16 @@ Route::get('/str-pad-right/2', function (): string {
     // 'James     '
 });
 
+Route::get('/str-password/1', function (): string {
+    return Str::password();
+
+    // 6.ao{q}sZp{^c2FN&MsEO/w2^{4&Ptxr
+});
+
+Route::get('/str-password/2', function (): string {
+    return Str::password(12);
+
+    // 79%&cH?w)xh2
+});
+
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
