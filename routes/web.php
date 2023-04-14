@@ -1022,4 +1022,16 @@ Route::get('/str-length', function (): int {
     // 7
 });
 
+Route::get('/str-limit/1', function (): string {
+    return Str::limit('The quick brown fox jumps over the lazy dog', 20);
+
+    // The quick brown fox...
+});
+
+Route::get('/str-limit/2', function (): string {
+    return Str::limit('The quick brown fox jumps over the lazy dog', 20, '(...)');
+
+    // The quick brown fox(...)
+});
+
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
