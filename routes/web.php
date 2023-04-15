@@ -1162,4 +1162,10 @@ Route::get('/str-replace', function (): string {
     // Laravel 9.x
 });
 
+Route::get('/str-replace-array', function (): string {
+    return Str::replaceArray('?', ['8:30', '9:00'], 'The event will take place between ? and ?');
+
+    // The event will take place between 8:30 and 9:00
+});
+
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
