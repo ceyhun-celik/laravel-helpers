@@ -1174,6 +1174,10 @@ Route::get('/str-replace-first', function (): string {
     // a quick brown fox jumps over the lazy dog
 });
 
+Route::get('/str-replace-last', function (): string {
+    return Str::replaceLast('the', 'a', 'the quick brown fox jumps over the lazy dog');
 
+    // the quick brown fox jumps over a lazy dog
+});
 
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
