@@ -1168,4 +1168,12 @@ Route::get('/str-replace-array', function (): string {
     // The event will take place between 8:30 and 9:00
 });
 
+Route::get('/str-replace-first', function (): string {
+    return Str::replaceFirst('the', 'a', 'the quick brown fox jumps over the lazy dog');
+
+    // a quick brown fox jumps over the lazy dog
+});
+
+
+
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
