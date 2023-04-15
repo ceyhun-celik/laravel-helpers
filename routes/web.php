@@ -1156,4 +1156,10 @@ Route::get('/str-remove', function (): string {
     // Ptr Pipr pickd a pck of pickld ppprs.
 });
 
+Route::get('/str-replace', function (): string {
+    return Str::replace('8.x', '9.x', 'Laravel 8.x');
+
+    // Laravel 9.x
+});
+
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
