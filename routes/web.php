@@ -820,9 +820,9 @@ Route::get('/str-before', function (): string {
 });
 
 Route::get('/str-before-last', function (): string {
-    return Str::before('App\Http\Controllers\UserController', '\\');
+    return Str::beforeLast('App\Http\Controllers\UserController', '\\');
 
-    // App
+    // App\Http\Controllers
 });
 
 Route::get('/str-between', function (): string {
