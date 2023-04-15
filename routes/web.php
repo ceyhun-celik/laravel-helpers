@@ -1180,4 +1180,10 @@ Route::get('/str-replace-last', function (): string {
     // the quick brown fox jumps over a lazy dog
 });
 
+Route::get('/str-reverse', function (): string {
+    return Str::reverse('Laravel');
+
+    // levaraL
+});
+
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
