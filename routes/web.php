@@ -1258,4 +1258,10 @@ Route::get('/str-substr', function (): string {
     // Laravel
 });
 
+Route::get('/str-substr-count', function () {
+    return Str::substrCount('If you like ice cream, you will like snow cones.', 'like');
+
+    // 2
+});
+
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
