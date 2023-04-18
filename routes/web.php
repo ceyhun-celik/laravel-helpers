@@ -1276,10 +1276,11 @@ Route::get('/str-substr-replace/2', function (): string {
     // 13:00
 });
 
-Route::get('str-substr-replace/3', function (): string {
+Route::get('/str-substr-replace/3', function (): string {
     return Str::substrReplace('1300', ':', 2, 1);
 
     // 13:0
 });
+
 
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
