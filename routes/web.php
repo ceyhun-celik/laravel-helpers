@@ -1291,4 +1291,10 @@ Route::get('/str-swap', function (): string {
     // Burritos are fantastic!
 });
 
+Route::get('/str-title', function (): string {
+    return Str::title('a nice title uses the correct case');
+
+    // A Nice Title Uses The Correct Case
+});
+
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
