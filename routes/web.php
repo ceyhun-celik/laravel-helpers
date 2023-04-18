@@ -1222,4 +1222,16 @@ Route::get('/str-squish', function (): string {
     // laravel framework
 });
 
+Route::get('/str-start/1', function (): string {
+    return Str::start('this/string', '/');
+
+    // /this/string
+});
+
+Route::get('/str-start/2', function (): string {
+    return Str::start('/this/string', '/');
+
+    // /this/string
+});
+
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
