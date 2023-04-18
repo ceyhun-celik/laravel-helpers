@@ -1252,4 +1252,10 @@ Route::get('/str-studly', function (): string {
     // FooBar
 });
 
+Route::get('/str-substr', function (): string {
+    return Str::substr('The Laravel Framework', 4, 7);
+
+    // Laravel
+});
+
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
