@@ -1303,4 +1303,18 @@ Route::get('/str-ucfirst', function (): string {
     // Foo bar
 });
 
+/**
+ * @return array<int, string>
+ */
+Route::get('/str-ucsplit', function (): array {
+    return Str::ucsplit('FooBar');
+
+    /*
+        [
+            "Foo",
+            "Bar"
+        ]
+    */
+});
+
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
