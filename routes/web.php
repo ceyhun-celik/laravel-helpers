@@ -1216,4 +1216,10 @@ Route::get('/str-snake/2', function (): string {
     // foo-bar
 });
 
+Route::get('/str-squish', function (): string {
+    return Str::squish('    laravel    framework     ');
+
+    // laravel framework
+});
+
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
