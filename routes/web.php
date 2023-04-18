@@ -1264,4 +1264,22 @@ Route::get('/str-substr-count', function () {
     // 2
 });
 
+Route::get('/str-substr-replace/1', function (): string {
+    return Str::substrReplace('1300', ':', 2);
+
+    // 13:
+});
+
+Route::get('/str-substr-replace/2', function (): string {
+    return Str::substrReplace('1300', ':', 2, 0);
+
+    // 13:00
+});
+
+Route::get('str-substr-replace/3', function (): string {
+    return Str::substrReplace('1300', ':', 2, 1);
+
+    // 13:0
+});
+
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
