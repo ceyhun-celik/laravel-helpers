@@ -1282,5 +1282,13 @@ Route::get('/str-substr-replace/3', function (): string {
     // 13:0
 });
 
+Route::get('/str-swap', function (): string {
+    return Str::swap([
+        'Tacos' => 'Burritos',
+        'great' => 'fantastic',
+    ], 'Tacos are great!');
+
+    // Burritos are fantastic!
+});
 
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
