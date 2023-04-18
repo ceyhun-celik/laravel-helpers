@@ -1297,4 +1297,10 @@ Route::get('/str-title', function (): string {
     // A Nice Title Uses The Correct Case
 });
 
+Route::get('/str-ucfirst', function (): string {
+    return Str::ucfirst('foo bar');
+
+    // Foo bar
+});
+
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
