@@ -1186,4 +1186,16 @@ Route::get('/str-reverse', function (): string {
     // levaraL
 });
 
+Route::get('/str-singular/1', function (): string {
+    return Str::singular('cars');
+
+    // car
+});
+
+Route::get('/str-singular/2', function (): string {
+    return Str::singular('children');
+
+    // child
+});
+
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
