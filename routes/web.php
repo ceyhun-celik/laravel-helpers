@@ -1317,4 +1317,10 @@ Route::get('/str-ucsplit', function (): array {
     */
 });
 
+Route::get('/str-upper', function (): string {
+    return Str::upper('laravel');
+
+    // LARAVEL
+});
+
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
