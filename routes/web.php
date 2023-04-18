@@ -1246,4 +1246,10 @@ Route::get('/str-starts-with/2', function (): string {
     // true
 });
 
+Route::get('/str-studly', function (): string {
+    return Str::studly('foo_bar');
+
+    // FooBar
+});
+
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
