@@ -1204,4 +1204,16 @@ Route::get('/str-slug', function (): string {
     // laravel-5-framework
 });
 
+Route::get('/str-snake/1', function (): string {
+    return Str::snake('fooBar');
+
+    // foo_bar
+});
+
+Route::get('/str-snake/2', function (): string {
+    return Str::snake('fooBar', '-');
+
+    // foo-bar
+});
+
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
