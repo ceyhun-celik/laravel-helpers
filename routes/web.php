@@ -1198,4 +1198,10 @@ Route::get('/str-singular/2', function (): string {
     // child
 });
 
+Route::get('/str-slug', function (): string {
+    return Str::slug('Laravel 5 Framework', '-');
+
+    // laravel-5-framework
+});
+
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
