@@ -1234,4 +1234,16 @@ Route::get('/str-start/2', function (): string {
     // /this/string
 });
 
+Route::get('/str-starts-with/1', function (): string {
+    return Str::startsWith('This is my name', 'This');
+
+    // true
+});
+
+Route::get('/str-starts-with/2', function (): string {
+    return Str::startsWith('This is my name', ['This', 'That', 'There']);
+
+    // true
+});
+
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
