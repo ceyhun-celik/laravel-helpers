@@ -1323,4 +1323,10 @@ Route::get('/str-upper', function (): string {
     // LARAVEL
 });
 
+Route::get('str-ulid', function (): string {
+    return (string) Str::ulid();
+
+    // 01GZ3PPGM20WR9KM2X88PVWMTG
+});
+
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
