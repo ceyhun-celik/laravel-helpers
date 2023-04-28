@@ -1335,4 +1335,10 @@ Route::get('/str-uuid', function (): string {
     // 83022811-c961-4292-b831-84bb47ade9be
 });
 
+Route::get('/str-word-count', function (): int {
+    return Str::wordCount('Hello, world!');
+
+    // 2
+});
+
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
