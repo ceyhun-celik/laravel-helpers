@@ -1341,4 +1341,10 @@ Route::get('/str-word-count', function (): int {
     // 2
 });
 
+Route::get('/str-words', function (): string {
+    return Str::words('Perfectly balanced, as all things should be.', 3, ' >>>');
+
+    // Perfectly balanced, as >>>
+});
+
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
