@@ -1323,7 +1323,7 @@ Route::get('/str-upper', function (): string {
     // LARAVEL
 });
 
-Route::get('str-ulid', function (): string {
+Route::get('/str-ulid', function (): string {
     return (string) Str::ulid();
 
     // 01GZ3Q4YRB4RWDF7P9KHNSVER5
