@@ -1329,4 +1329,10 @@ Route::get('/str-ulid', function (): string {
     // 01GZ3Q4YRB4RWDF7P9KHNSVER5
 });
 
+Route::get('/str-uuid', function (): string {
+    return (string) Str::uuid();
+
+    // 83022811-c961-4292-b831-84bb47ade9be
+});
+
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
