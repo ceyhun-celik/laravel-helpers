@@ -1347,4 +1347,5 @@ Route::get('/str-words', function (): string {
     // Perfectly balanced, as >>>
 });
 
+// https://laravel.com/docs/10.x/helpers#method-fluent-str-markdown
 // https://github.com/piotrplenik/clean-code-php#liskov-substitution-principle-lsp
